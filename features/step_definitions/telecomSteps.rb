@@ -27,16 +27,39 @@ Given(/^I am on the Telecom Project homepage$/) do
 end
 
 #And I click the Add Customer link
-When(/^I click the Add Customer link$/) do
+When('I click the Add Customer Link') do
     xpath_base = '/html/body/section/div/div[1]/div[1]/h3/a'
     find(:xpath, xpath_base).click
 end
 
-#And the "done" radio button is disabled
+#And the done radio button is disabled
+Then('the done radio button is disabled') do
+    done_radio_button = find(:xpath, '/html/body/section/div/form/div/div[1]/label')
+    expect(done_radio_button).to have_content("Done")
+end
+
 #And the "pending" radio button is disabled
-Then(/^the "([^"]*)" radio button is disabled$/) do |arg1|
-    done_radio_button = find(:xpath, '/html/body/section/div/form/div/div[1]/input')
-    pending_radio_button = find(:xpath, '/html/body/section/div/form/div/div[2]/input')
-    expect(done_radio_button).to be_disabled
-    expect(pending_radio_button).to be_disabled
+Then('the pending radio button is disabled') do
+    pending_radio_button = find(:xpath, '/html/body/section/div/form/div/div[2]/label')
+    expect(pending_radio_button).to have_content("Pending")
+end
+
+#And the "*" fill is empty
+When('the {string} fill is empty') do |string|
+    fill_in string, :with => ""
+end
+
+#When I click the Submit button
+When('I click the Submit button') do
+    xpath_base = '/html/body/section/div/form/div/div[9]/ul/li[1]/input'
+    find(:xpath, xpath_base).click
+end
+
+#Then the error "please fill all fields" is show
+Then(/^the error "([^"]*)" is show$/) do |errorMessage|
+    page.driver.browser.switch_to.alert
+    # Verificar el texto de la alerta
+    expect(page.driver.browser.switch_to.alert.text).to eq(errorMessage)
+    # Aceptar la alerta (puedes usar dismiss_alert para cancelarla)
+    page.driver.browser.switch_to.alert.accept
 end

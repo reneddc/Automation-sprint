@@ -9,8 +9,29 @@ Scenario: Go to the Telecom Project
 	When I click the Telecom Project link
         Then I should see the Guru99 Telecom Project screen
 
-Scenario: Add customer by homepage link 
+Scenario: Add customer by homepage with empty fills
 	Given I am on the Telecom Project homepage
-	And I click the Add Customer link
-        And the "done" radio button is disabled
-        And the "pending" radio button is disabled
+        When I click the Add Customer Link
+        And the done radio button is disabled
+        And the pending radio button is disabled
+        And the "fname" fill is empty
+        And the "lname" fill is empty
+        And the "email" fill is empty
+        And the "message" fill is empty
+        And the "telephoneno" fill is empty
+        When I click the Submit button
+        Then the error "please fill all fields" is show
+
+@actual
+Scenario: Add customer by homepage with empty fills
+	Given I am on the Telecom Project homepage
+        When I click the Add Customer Link
+        And the done radio button is disabled
+        And the pending radio button is disabled
+        And the "fname" fill is empty
+        And the "lname" fill is empty
+        And the "email" fill is empty
+        And the "message" fill is empty
+        And the "telephoneno" fill is empty
+        When I click the Submit button
+        Then the error "please fill all fields" is show
