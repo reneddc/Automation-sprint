@@ -4,3 +4,4 @@ To run the features run:
 ...\1000CapybaraSamples>cucumber features\2travel.feature
 ...\1000CapybaraSamples>cucumber features\3GmoOnline.feature
 ...\1000CapybaraSamples>cucumber features\4ArasttaDemo.feature
+...\1000CapybaraSamples>cucumber features\guru99.feature
