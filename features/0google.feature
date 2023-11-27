@@ -18,4 +18,3 @@ Scenario: Searching for a UCB Site
   And I see text about working hours "Atención de lunes a viernes de 08:30 a 16:00"
   And for payments the schedule is "Cajas de 08:30 a 15:30"
 
-
