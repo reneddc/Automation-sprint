@@ -27,8 +27,12 @@ Given(/^I am on the Telecom Project homepage$/) do
 end
 
 #And I click the Add Customer link
-When('I click the Add Customer Link') do
-    xpath_base = '/html/body/section/div/div[1]/div[1]/h3/a'
+When('I click the Add Customer Link from {string}') do |string|
+    if string == "homepage"
+        xpath_base = '/html/body/section/div/div[1]/div[1]/h3/a'
+    else
+        xpath_base = '/html/body/nav/ul/li[2]/a'
+    end
     find(:xpath, xpath_base).click
 end
 
@@ -63,3 +67,27 @@ Then(/^the error "([^"]*)" is show$/) do |errorMessage|
     # Aceptar la alerta (puedes usar dismiss_alert para cancelarla)
     page.driver.browser.switch_to.alert.accept
 end
+
+When('I click the menu button') do
+    xpath_base = '/html/body/span/nav/a[1]'
+    find(:xpath, xpath_base).click
+end
+
+
+When(/^I enter the required fields as show below$/) do |table|
+    data = table.rows_hash
+    data.each_pair do |key, value|
+      case key
+      when "First Name:"
+          fill_in 'fname', :with => value
+      when "Last Name:"
+          fill_in 'lname', :with => value
+      when "Email:"
+          fill_in 'email', :with => value
+      when "Address:"
+          fill_in 'message', :with => value
+      when "Phone:"
+          fill_in 'telephoneno', :with => value
+      end
+    end
+  end
