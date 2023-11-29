@@ -3,8 +3,10 @@ Feature: Guru99 Insurence Verify Registration
     As a registered customer
     I want to navigate to the car insurance section and test the online shopping options
 
+Background: I am on the Insurance Project
+    Given I am on the Insurance Project
+    
 Scenario: Register a user on site        
-	Given I am on the Insurance Project
 	And I click the "Register" button
 	When I enter the required fields
     |Title: 	         | Mrs                   |
@@ -27,7 +29,6 @@ Scenario: Register a user on site
 	And send my registration form of insurance
 
 Scenario: Login in the Guru99 Insurence
-	Given I am on the Insurance Project
 	When I enter my email and password
 	And I click the "Login" button
     Then I should see the Guru99 Insurence Project screen
