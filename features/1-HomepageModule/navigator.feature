@@ -25,3 +25,13 @@ Scenario: Redirect to the Insurance Project
 	Then I should see a login form
     And a "Register" button
     And a "Log in" button
+
+Scenario: Redirect to the Agile Project
+	Given I am on the sample homepage
+	When I click the "Agile Project" option of the navbar
+	Then I should see a login form
+    And a "LOGIN" button
+    And a "RESET" button
+    And a section Access with the following data
+    |   UserId          |   1303            |
+    |   Password        |   Guru99          | 

@@ -5,6 +5,8 @@ When('I click the {string} option of the navbar') do |option|
             xpath_base = '/html/body/div[1]/div[2]/nav/div/div/ul/li[1]/a'
         when "Insurance Project"
             xpath_base = '/html/body/div[1]/div[2]/nav/div/div/ul/li[3]'
+        when "Agile Project"
+            xpath_base = '/html/body/div[1]/div[2]/nav/div/div/ul/li[3]'
     end
     find(:xpath, xpath_base).click
 end
@@ -29,7 +31,7 @@ Then('I should see a login form') do
 end
 
 #And a "Register" button
-Then('a {string} button') do |button|
+Then('a Register button') do
     if button == "Register"
         xpath_base = '/html/body/div[3]/a'
     else
