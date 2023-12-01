@@ -8,6 +8,10 @@ require 'capybara-screenshot/cucumber'
 ENV['USER']="Pepazo"
 ENV['PSW']="ILoveQA"
 
+#Telecom Project - Customer Information
+ENV['FNAME']="Hugo"
+ENV['CUSTOMERID']=""
+
 Capybara.default_driver = :selenium
 
 # Set the host the Capybara tests should be run against
