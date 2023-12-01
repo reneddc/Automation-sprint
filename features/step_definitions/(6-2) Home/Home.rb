@@ -22,6 +22,5 @@ When(/^I press the "Home" button h$/) do
 Then(/^I should see the message Broker Insurance Web Page$/) do
     broken_insurance_webpage = "Broker Insurance WebPage"
     expect(page).to have_content(broken_insurance_webpage)
-
   end
   
