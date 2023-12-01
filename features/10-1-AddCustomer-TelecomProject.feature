@@ -96,7 +96,7 @@ Scenario: Add custumer with an invalid number
 	Then I should see the error alert "please fill all fields"
 
 
-@last
+
 Scenario: Reset the Add customer form
 	Given I am on the Telecom Project section
     And I press the "Add Customer" link
