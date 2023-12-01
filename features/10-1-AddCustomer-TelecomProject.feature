@@ -97,7 +97,7 @@ Scenario: Add custumer with an invalid number
 
 
 @last
-Scenario: Reset the Add customer fomr
+Scenario: Reset the Add customer form
 	Given I am on the Telecom Project section
     And I press the "Add Customer" link
     And I see the "Background check" form
@@ -115,3 +115,22 @@ Scenario: Reset the Add customer fomr
         |LastName	        |               |
         |Email 	            |               |	
         |Mobile Number 	    |               |
+
+
+@last
+@saveCustomerID
+Scenario: Add custumer with valid values
+	Given I am on the Telecom Project section
+    And I press the "Add Customer" link
+    And I see the "Background check" form
+    And I see the "Billing Address" form
+    When Select the Done option of radio button
+    And I enter the Billing Address required fields as show below
+        |FirstName: 	        | Hugo               |
+        |LastName: 	            | Sanchez            |
+        |Email: 	            | hugo@sanchez.com   |
+        |Enter your Addrress:   | Sacaba   |	
+        |Mobile Number: 	    | 65344375           |
+    And Press the "Submit" button
+	Then I should see a table with the following information:
+        | Customer ID	    |  282412            |
