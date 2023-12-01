@@ -32,14 +32,43 @@ And(/^I press the "Retrieve" button s$/) do
     find(:xpath, xpath_base).click
   end
 
-# Then(/^I should see a message confirming that it was saved$/) do
+  Then(/^I should be able to see my retrieved quotation$/) do
+    
+    user_id_element = find('td b', text: 'user_id').find(:xpath, '//table[@border="1"]/tbody/tr[4]/td[2]')
+    user_id = user_id_element.text.to_i
+    expect(user_id).to eq(73135)
 
-#   saved_quotation = "You have saved this quotation!"
-#   identification_number = /Your identification number is : (\d+)/
-#   write_it_down_for_later = "Please write it down for later retrieve"
+    yes_element = find(:xpath, '//table[@border="1"]/tbody/tr[3]/td[2]')
+    yes_text = yes_element.text
+    expect(yes_text).to eq('Yes')
+
+    incidents_element = find(:xpath, '//table[@border="1"]/tbody/tr[5]/td[2]')
+    incidents_element = incidents_element.text
+    expect(incidents_element).to eq('0')
+
+    incidents_element = find(:xpath, '//table[@border="1"]/tbody/tr[5]/td[2]')
+    incidents_element = incidents_element.text
+    expect(incidents_element).to eq('0')
+
+    registration_element = find(:xpath, '//table[@border="1"]/tbody/tr[6]/td[2]')
+    registration_element = registration_element.text
+    expect(registration_element).to eq('ABC123')
+
+    annual_mileage_element = find(:xpath, '//table[@border="1"]/tbody/tr[7]/td[2]')
+    annual_mileage_element = annual_mileage_element.text
+    expect(annual_mileage_element).to eq('12000')
+
+    estimated_value_element = find(:xpath, '//table[@border="1"]/tbody/tr[8]/td[2]')
+    estimated_value_element = estimated_value_element.text
+    expect(estimated_value_element).to eq('15000')
+
+    parking_location_element = find(:xpath, '//table[@border="1"]/tbody/tr[9]/td[2]')
+    parking_location_element = parking_location_element.text
+    expect(parking_location_element).to eq('Public place')
+
+    start_of_policy = find(:xpath, '//table[@border="1"]/tbody/tr[10]/td[2]')
+    start_of_policy = start_of_policy.text
+    expect(start_of_policy).to eq('2018.8.15')
+
+  end
   
-#   expect(page).to have_content(saved_quotation)
-#   expect(page).to have_content(identification_number)
-#   expect(page).to have_content(write_it_down_for_later)
-  
-#   end

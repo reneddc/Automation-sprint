@@ -10,6 +10,7 @@ To run the features run:
 
 
 
-...\1000CapybaraSamples>cucumber features\2-NavBarModule\2B-InsuranceProject\insuranceLogin-Register.feature
-...\1000CapybaraSamples>cucumber features\2-NavBarModule\2B-InsuranceProject\2B1-RequestQuotation\RequestQuotation.feature
-...\1000CapybaraSamples>cucumber features\2-NavBarModule\2B-InsuranceProject\2B2-RetrieveQuotation\RetrieveQuotation.feature
+...\1000CapybaraSamples>cucumber features\6-1-InsuranceProject-Register-Login.feature
+...\1000CapybaraSamples>cucumber features\6-2-InsuranceProject-Home.feature
+...\1000CapybaraSamples>cucumber features\6-3-InsuranceProject-RequestQuotation.feature
+...\1000CapybaraSamples>cucumber features\6-4-InsuranceProject-RetrieveQuotation.feature

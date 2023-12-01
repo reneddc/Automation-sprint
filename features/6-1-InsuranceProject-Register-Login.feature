@@ -3,7 +3,7 @@ Feature: Guru99 Insurence Verify Registration
     As a registered customer
     I want to navigate to the car insurance section and test the online shopping options
 
-Background: I am on the Insurance Project
+Background: 
     Given I am on the Insurance Project
     
 Scenario: Register a user on site        

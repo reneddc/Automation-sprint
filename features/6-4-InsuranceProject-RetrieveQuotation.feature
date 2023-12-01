@@ -10,6 +10,7 @@ Scenario: Enter your identification number
   And I pre the "Login" button
   And I press the "Retrieve Quote" button n
   When I enter the identification number
-  |Identification Number: | 33313 |
+  |Identification Number: | 33418 |
   And I press the "Retrieve" button s
+  Then I should be able to see my retrieved quotation
  
