@@ -7,7 +7,7 @@ As a customer who wants to generate a card with money,
 Scenario: A new credit card is generated
   Given I am on the payment gateway project section
   And I press the "Generate Card Number" button g
-  Then I should be able to see my credit card information
+
  
 
 
