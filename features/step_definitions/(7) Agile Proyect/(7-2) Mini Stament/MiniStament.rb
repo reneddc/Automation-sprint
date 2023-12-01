@@ -60,3 +60,5 @@ And('I Press "Submit" for scene 4')do
   xpath_submit = '/html/body/table/tbody/tr/td/table/tbody/tr[11]/td[2]/input[2]'
   find(:xpath, xpath_submit).click
 end
+
+
