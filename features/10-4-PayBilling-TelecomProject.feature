@@ -16,7 +16,7 @@ Background:
         |Email: 	            | hugo@sanchez.com   |
         |Enter your Addrress:   | Sacaba             |	
         |Mobile Number: 	    | 65344375           |
-    And Press the "Submit" button
+    And Press the "Submit" button of the form
     And I save the customerId generated
     And I press the Home link below the CustomerId generated
 
@@ -24,7 +24,7 @@ Scenario: Pay Billing with an empty Customer ID
 	Given I am on the Telecom Project section
     And I press the "Pay Billing" link
     And I see the "Pay Billing" title
-    When Press the "submit" button
+    When Press the "submit" button of the form
 	Then I should see the error alert "Please Correct Value Input"
 
 
@@ -33,7 +33,7 @@ Scenario Outline: Submit an invalid Customer ID to Pay Billing
     And I press the "Pay Billing" link
     And I see the "Pay Billing" title
     When I enter "<customerID>" in the field "Enter Your Customer ID"
-    When Press the "submit" button
+    When Press the "submit" button of the form
 	Then I should see the message "Please Input Your Correct Customer ID"
     And I see the button "Pay Billing"
 
@@ -53,7 +53,7 @@ Scenario Outline: Submit an invalid Customer ID to Pay Billing
     And I see the "Pay Billing" title
     When I enter "<customerID>" in the field "Enter Your Customer ID"
     Then I should see the message "<message>"
-    And Press the "submit" button
+    And Press the "submit" button of the form
 	And I should see the error alert "Please Correct Value Input"
 
     Examples:
@@ -67,7 +67,7 @@ Scenario: Pay Billing with a valid Customer ID
     And I press the "Pay Billing" link
     And I see the "Pay Billing" title
     When I enter the customerID created before
-    And Press the "submit" button
+    And Press the "submit" button of the form
     Then I should see the customerID in the screen
     And I should see the message "Customer Name:- Hugo"
     And I should see the next table:

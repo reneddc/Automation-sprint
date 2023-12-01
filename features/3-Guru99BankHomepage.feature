@@ -8,7 +8,7 @@ Feature: Guru99 Bank of Homepage
 Scenario: Register in "Guru Bank 99" with valid email
 	Given I am on the sample homepage
 	When I enter "carlos@test.com" for Register
-    And Press the "Submit" button
+    And Press the "Submit" button of the form
 	Then I should see the following table:
     | User ID	     |  mngr23537  |
  	| Password       |  Ypegaza    | 
@@ -16,21 +16,21 @@ Scenario: Register in "Guru Bank 99" with valid email
 
 Scenario: Register in "Guru Bank 99" without email
 	Given I am on the sample homepage
-	When Press the "Submit" button
+	When Press the "Submit" button of the form
 	Then error "Email ID must not be blank" is show
 
 
 Scenario: Register in "Guru Bank 99" with invalid email
 	Given I am on the sample homepage
 	When I enter "carlos@test" for Register
-    And Press the "Submit" button
+    And Press the "Submit" button of the form
 	Then error "Email ID is not valid" is show
 
 
 Scenario Outline: Register on Guru99 page with a several emails        
     Given I am on the sample homepage
     When I enter "<email>" for Register
-    And Press the "Submit" button
+    And Press the "Submit" button of the form
     Then I should see <username> id
   
 Examples:

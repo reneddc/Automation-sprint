@@ -4,7 +4,7 @@ When(/^I enter "([^"]*)" for Register$/) do |userName|
   end
 
 #And Press the "Submit" button
-When('Press the {string} button') do |buttonName|
+When('Press the {string} button of the form') do |buttonName|
     click_button(buttonName) 
 end
 

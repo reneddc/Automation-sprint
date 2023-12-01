@@ -63,7 +63,7 @@ When(/^I enter the required fields$/) do |table|
     fill_in 'password', :with => ENV['Password']
   end
 
-  And(/^I click the "Login" button$/) do
+  And(/^I click the "Login" buton$/) do
     xpath_base = '/html/body/div[3]/form/div[3]/input'
     find(:xpath, xpath_base).click
   end

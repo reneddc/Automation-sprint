@@ -14,7 +14,7 @@ Background:
         |Email: 	            | hugo@sanchez.com   |
         |Enter your Addrress:   | Sacaba             |	
         |Mobile Number: 	    | 65344375           |
-    And Press the "Submit" button
+    And Press the "Submit" button of the form
     And I save the customerId generated
     And I press the Home link below the CustomerId generated
 
@@ -24,23 +24,23 @@ Scenario: Add tariff plan to customer without selecting tariff plan
     And I press the "Add Tariff Plan to Customer" link
     And I see the "Add Tariff Plan to Customer" title
     When I enter the customerID created before
-    And Press the "submit" button
+    And Press the "submit" button of the form
     Then I should see the message "Welcome to add customer tariff plan Hugo"
     And I see the "Approved" Tariff Plans
     And I see the "Unaproved" Tariff Plans
-    And Press the "Add Tariff Plan to Customer" button
+    And Press the "Add Tariff Plan to Customer" button of the form
 	And I should see the message "Congratulation Tariff Plan assigned"
 
 @last
-Scenario: Add tariff plan to customer without selecting tariff plan
+Scenario: Add tariff plan to customer selecting tariff plan
 	Given I am on the Telecom Project section
     And I press the "Add Tariff Plan to Customer" link
     And I see the "Add Tariff Plan to Customer" title
     When I enter the customerID created before
-    And Press the "submit" button
+    And Press the "submit" button of the form
     Then I should see the message "Welcome to add customer tariff plan Hugo"
     And I see the "Approved" Tariff Plans
     And I see the "Unaproved" Tariff Plans
     And I select the Approved Tariff Plan
-    And Press the "Add Tariff Plan to Customer" button
+    And Press the "Add Tariff Plan to Customer" button of the form
 	And I should see the message "Congratulation Tariff Plan assigned"

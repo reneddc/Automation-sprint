@@ -30,5 +30,5 @@ Scenario: Register a user on site
 
 Scenario: Login in the Guru99 Insurence
 	When I enter my email and password
-	And I click the "Login" button
+	And I click the "Login" buton
     Then I should see the Guru99 Insurence Project screen
