@@ -20,3 +20,5 @@ cucumber features\2-RedirectToTutorials.feature
 cucumber features\3-Guru99BankHomepage.feature
 cucumber features\10-1-AddCustomer-TelecomProject.feature
 cucumber features\10-2-AddTariffPlan-TelecomProject.feature
+cucumber features\10-3-AddTariffPlanToCustomer-TelecomProject.feature
+cucumber features\10-3-1-AddTariffPlanToCustomer-TelecomProject.feature
