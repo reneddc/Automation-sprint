@@ -50,13 +50,13 @@ And('I Press "Submit" for scene 3')do
   find(:xpath, xpath_submit).click
 end
 
-When('I select the four option from the list') do
+And('I select the four option from the list') do
   # Ajusta 'tu_xpath_real' con el XPath exacto de tu elemento
   xpath = '/html/body/table/tbody/tr/td/table/tbody/tr[6]/td[2]/select/option[4]'
   find(:xpath, xpath).select_option
 end
 
 And('I Press "Submit" for scene 4')do
-  xpath_submit = '/html/body/table/tbody/tr/td/table/tbody/tr[11]/td[2]/input[1]'
+  xpath_submit = '/html/body/table/tbody/tr/td/table/tbody/tr[11]/td[2]/input[2]'
   find(:xpath, xpath_submit).click
 end
