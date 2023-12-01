@@ -16,3 +16,4 @@ To run the features run:
 
 
 cucumber features\1-RedirectToGuru99.feature
+cucumber features\2-RedirectToTutorials.feature
