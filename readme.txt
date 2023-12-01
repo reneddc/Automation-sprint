@@ -14,3 +14,8 @@ To run the features run:
 ...\1000CapybaraSamples>cucumber features\6-2-InsuranceProject-Home.feature
 ...\1000CapybaraSamples>cucumber features\6-3-InsuranceProject-RequestQuotation.feature
 ...\1000CapybaraSamples>cucumber features\6-4-InsuranceProject-RetrieveQuotation.feature
+
+
+
+
+...\1000CapybaraSamples>cucumber features\11-1-Payment-Gateway-Project-Cart.feature

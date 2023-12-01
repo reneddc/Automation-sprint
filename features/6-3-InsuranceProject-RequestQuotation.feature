@@ -7,7 +7,7 @@ Feature: Guru99 Insurance Quote Request
 Background:
   Given I am on the Insurance Project Page
 
-Scenario: Fill out Quote Request Form and save it
+Scenario: Fill out Quote Request Form, Save, Reset, and Calculate Premium
     And I enter my email and password in the form
     And I push the "Login" button
     And I click the "Request Quotation" button
