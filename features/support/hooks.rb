@@ -13,3 +13,7 @@ After '@saveCustomerID' do
   ENV['CUSTOMERID'] = customerID.text
   puts ENV['CUSTOMERID']
 end
+
+After '@backToCustomerIDForm' do 
+  click_link('Add Tariff Plan to Customer')
+end
