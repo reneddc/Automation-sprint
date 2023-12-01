@@ -13,3 +13,6 @@ To run the features run:
 ...\1000CapybaraSamples>cucumber features\2-NavBarModule\2B-InsuranceProject\insuranceLogin-Register.feature
 ...\1000CapybaraSamples>cucumber features\2-NavBarModule\2B-InsuranceProject\2B1-RequestQuotation\RequestQuotation.feature
 ...\1000CapybaraSamples>cucumber features\2-NavBarModule\2B-InsuranceProject\2B2-RetrieveQuotation\RetrieveQuotation.feature
+
+
+cucumber features\1-RedirectToGuru99.feature
