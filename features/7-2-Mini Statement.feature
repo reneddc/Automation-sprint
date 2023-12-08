@@ -1,7 +1,6 @@
 Feature: Agile Project Verify Credentials
    To customize the home page
-   Mini statement: Agile Project Verify Credentials
-   I want to test the customization options
+   Verify all the options 
 
 Background:  
     Given I am in the agile project page
@@ -15,16 +14,15 @@ Scenario: Press to the option 1 Mini Statement
 	When I select the first option from the list
     And I Press "Submit" button
     Then I should see an error message from Google
-    
+
+@submit_butom    
 Scenario: Press to the option  2 Mini Statement     
 	When I select the two option from the list
-    And I Press "Submit" for scene 2
 
+@submit_butom    
 Scenario: Press to the option 3 Mini Statement      
     When I select the third option from the list
-    And I Press "Submit" for scene 3
 
-
+@submit_butom    
 Scenario: Press to the option 4 Mini Statement      
     When I select the four option from the list
-    And I Press "Submit" for scene 4

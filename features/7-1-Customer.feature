@@ -1,7 +1,6 @@
 Feature: Agile Project Verify Credentials
    To customize the home page
-   Mini statement: Agile Project Verify Credentials
-   I want to test the customization options
+   Mini statement: I want to test the customization options
 
 Background:  
     Given I am in the agile project page    
@@ -14,3 +13,4 @@ Scenario: Prees to button thay say "Customer"
     Then I should see a welcome message
 
 
+ 

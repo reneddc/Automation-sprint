@@ -22,3 +22,11 @@ cucumber features\10-1-AddCustomer-TelecomProject.feature
 cucumber features\10-2-AddTariffPlan-TelecomProject.feature
 cucumber features\10-3-AddTariffPlanToCustomer-TelecomProject.feature
 cucumber features\10-3-1-AddTariffPlanToCustomer-TelecomProject.feature
+cucumber features\(7-1)Customer.feature
+cucumber features\(7-2)MiniStatement.feature
+cucumber features\(7-3)LogOut.feature
+cucumber features\7-LoginAgile.feature
+cucumber features\8-BankProyect.feature
+
+Otra manera
+cucumber .\features\7-LoginAgile.feature 

@@ -1,9 +1,5 @@
 # features/step_definitions/agile_project_steps.rb
 
-And('I am on the Mini Statement Input page') do
-  page.driver.browser.manage.window.maximize
-  visit 'https://demo.guru99.com/Agile_Project/Agi_V1/customer/MiniStatementInput.php'
-end
 
 When('I select the first option from the list') do
   # Ajusta 'tu_xpath_real' con el XPath exacto de tu elemento
@@ -60,5 +56,3 @@ And('I Press "Submit" for scene 4')do
   xpath_submit = '/html/body/table/tbody/tr/td/table/tbody/tr[11]/td[2]/input[2]'
   find(:xpath, xpath_submit).click
 end
-
-

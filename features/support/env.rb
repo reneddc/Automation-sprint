@@ -12,6 +12,11 @@ ENV['PSW']="ILoveQA"
 ENV['FNAME']="Hugo"
 ENV['CUSTOMERID']=""
 
+#Bank Project - Bank Information
+ENV['UserID']="mngr541807"
+ENV['Password']="vezasym"
+
+
 Capybara.default_driver = :selenium
 
 # Set the host the Capybara tests should be run against
@@ -38,3 +43,7 @@ CapybaraDriverRegistrar.register_selenium_driver(:chrome)
 Capybara.run_server = false
 #World(Capybara)
 
+And('I am on the Mini Statement Input page') do
+  page.driver.browser.manage.window.maximize
+  visit 'https://demo.guru99.com/Agile_Project/Agi_V1/customer/MiniStatementInput.php'
+end

@@ -16,13 +16,18 @@ end
  #find(:xpath, xpath_submit).click
 #end
 
-After '@saveCustomerID' do 
+After '@saveCustomerID' do
   customerID = find(:xpath, '/html/body/section/div/div/table/tbody/tr[1]/td[2]/h3')
   ENV['CUSTOMERID'] = customerID.text
   puts ENV['CUSTOMERID']
 end
 
-After '@backToCustomerIDForm' do 
+After '@backToCustomerIDForm' do
   click_link('Add Tariff Plan to Customer')
 end
 
+
+After('@submit_butom') do
+  xpath_submit = '/html/body/table/tbody/tr/td/table/tbody/tr[11]/td[2]/input[2]'
+  find(:xpath, xpath_submit).click
+end
