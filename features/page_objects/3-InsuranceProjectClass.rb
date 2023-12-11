@@ -14,10 +14,18 @@ class InsuranceProject
     def getExpectedInsuranceSectionPath(sectionPage)
         expected_url = ""
         case sectionPage
-            when "Log In"
+            when "Guru99 Insurance Log In"
                 expected_url = "https://demo.guru99.com/insurance/v1/index.php"
-            when "Homepage"
+            when "Guru99 Insurance Home"
                 expected_url = "https://demo.guru99.com/insurance/v1/header.php"
+            when "Agile Project Log In"
+                expected_url = "https://demo.guru99.com/Agile_Project/Agi_V1/"
+            when "Agile Project Home"
+                expected_url = "https://demo.guru99.com/Agile_Project/Agi_V1/customer/Customerhomepage.php"
+            when "Guru99 GPTL Project Log In"
+                expected_url = "https://demo.guru99.com/V1/index.php"
+            when "GPTL Bank Project Home"
+                expected_url = "https://demo.guru99.com/V1/html/Managerhomepage.php"
         end
         expected_url
     end

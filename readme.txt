@@ -34,3 +34,7 @@ cucumber features\1-Homepage-Register.feature
 cucumber features\2-Homepage-Tutorials.feature
 cucumber features\3-InsuranceProject-Register.feature
 cucumber features\4-InsuranceProject-LogIn.feature
+cucumber features\5-InsuranceProject-RequestQuotation.feature
+cucumber features\6-InsuranceProject-RetrieveQuotation.feature
+cucumber features\7-AgileProject-Login-out.feature
+cucumber features\8-BankProject-Login-out.feature

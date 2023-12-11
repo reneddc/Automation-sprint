@@ -1,4 +1,4 @@
-class RegisterInsuranceProject
+class RegisterLoginInsuranceProject
     attr_reader :page
   
     def initialize(page)
@@ -109,5 +109,11 @@ class RegisterInsuranceProject
             end
         end
         formFieldsValues
+    end
+
+    def fillLogInForm(email, password)
+        @page.fill_in('email', with:email)
+        @page.fill_in('password', with:password)
+        sleep 2
     end
 end

@@ -7,6 +7,11 @@ require 'capybara-screenshot/cucumber'
 #InsuranceCredentials
 ENV['INSURANCE_EMAIL'] = "pepitope5000@gmail.com"
 ENV['INSURANCE_PASSWORD'] = "prueba123"
+ENV['ID_NUMBER'] = "33808"
+
+#HomepageCredentials
+ENV['USERID'] = "mngr539425"
+ENV['USERPASSWORD'] = "ytypErU"
 
 #PTravel Settings
 ENV['USER']="Pepazo"

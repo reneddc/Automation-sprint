@@ -15,7 +15,8 @@ end
 
 #Then I should see <username> id
 Then(/^I should see mngr(\d+) id$/) do |arg1|
-    @homepage.showUserId
+    matchResult = @homepage.showUserId
+    expect(matchResult).to be_truthy
 end
 
 #Then error "Email ID must not be blank" is show

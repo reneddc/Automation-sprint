@@ -9,7 +9,7 @@ Background:
     
 
 Scenario: Register new user in Guru99 Insurance    
-    Given I am in Guru99 Insurance "Log In" page
+    Given I see the "Guru99 Insurance Log In" page
 	And I click the "Register" button-link
 	And I enter the register Guru99 Insurances fields
     |Title: 	         | Mrs                   |
@@ -30,17 +30,17 @@ Scenario: Register new user in Guru99 Insurance
     |Password:           | prueba123             |
     |Confirm password:   | prueba123             |
 	When Press the "Create" button of the screen
-    Then I should see the Guru99 Insurance "Log In" page
+    Then I see the "Guru99 Insurance Log In" page
 
 Scenario: Register new user in Guru99 Insurance with empty form
-    Given I am in Guru99 Insurance "Log In" page
+    Given I see the "Guru99 Insurance Log In" page
 	And I click the "Register" button-link
 	When Press the "Create" button of the screen
-    Then I should see the Guru99 Insurance "Log In" page
+    Then I see the "Guru99 Insurance Log In" page
 
 
 Scenario Outline: Register new user in Guru99 Insurance with invalid field "Confirm password"
-    Given I am in Guru99 Insurance "Log In" page
+    Given I see the "Guru99 Insurance Log In" page
 	And I click the "Register" button-link
     And I enter the register Guru99 Insurances fields
     |Title: 	         | Mrs                   |
@@ -72,7 +72,7 @@ Scenario Outline: Register new user in Guru99 Insurance with invalid field "Conf
 
 @last
 Scenario: Reset Register Guru99 Insurance form
-    Given I am in Guru99 Insurance "Log In" page
+    Given I see the "Guru99 Insurance Log In" page
 	And I click the "Register" button-link
 	And I enter the register Guru99 Insurances fields
     |Title: 	         | Mrs                   |
