@@ -38,3 +38,4 @@ cucumber features\5-InsuranceProject-RequestQuotation.feature
 cucumber features\6-InsuranceProject-RetrieveQuotation.feature
 cucumber features\7-AgileProject-Login-out.feature
 cucumber features\8-BankProject-Login-out.feature
+cucumber features\9-SecurityProject-Login-out.feature

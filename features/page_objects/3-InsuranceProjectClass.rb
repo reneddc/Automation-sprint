@@ -26,6 +26,10 @@ class InsuranceProject
                 expected_url = "https://demo.guru99.com/V1/index.php"
             when "GPTL Bank Project Home"
                 expected_url = "https://demo.guru99.com/V1/html/Managerhomepage.php"
+            when "Guru99 Security Bank project Log In"
+                expected_url = "https://demo.guru99.com/Security/SEC_V1/index.php"
+            when "Guru99 Security Bank project Home"
+                expected_url = "https://demo.guru99.com/Security/SEC_V1/customer/Customerhomepage.php"
         end
         expected_url
     end
