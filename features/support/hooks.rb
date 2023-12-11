@@ -1,20 +1,16 @@
+#Before para todos los scenarios
+Before do
+  page.driver.browser.manage.window.maximize
+  @homepage = Homepage.new(page)
+  @InsuranceProject = InsuranceProject.new(page)
+  @RegisterInsuranceProject = RegisterInsuranceProject.new(page)
+  @LogInInsuranceProject = LogInInsuranceProject.new(page)
+end
 
+#After para todos los scenarios
 After do
     Capybara.current_session.driver.quit
 end
-
-
-Before '@maximize' do
-  page.driver.browser.manage.window.maximize
-end
-
-
-
-#After do
-  #Aquí colocas la lógica para hacer clic en el botón "Submit" después de cada escenario
-  #xpath_submit = '/html/body/table/tbody/tr/td/table/tbody/tr[11]/td[2]/input[1]'
- #find(:xpath, xpath_submit).click
-#end
 
 After '@saveCustomerID' do 
   customerID = find(:xpath, '/html/body/section/div/div/table/tbody/tr[1]/td[2]/h3')
