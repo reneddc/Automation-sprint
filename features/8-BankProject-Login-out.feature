@@ -1,7 +1,7 @@
 Feature: Login in Guru99 GPTL Bank Project
     As a demo.Guru99 user 
     I want to log in in the Guru99 GPTL Bank project
-    So I will intercat with the differents activities of this section
+    So I will interact with the differents activities of this section
 
 Background: 
     Given I am on the sample homepage

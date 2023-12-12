@@ -51,6 +51,6 @@ Scenario: LogOut of Guru99 Insurance
     Given I see the "Guru99 Insurance Log In" page
     And I enter a registered email and password 
 	And Press the "Log in" button of the screen
-    And I see the Guru99 Insurance "Homepage" page
+    And I see the "Guru99 Insurance Home" page
     When Press the "Log out" button of the screen
-    Then I see the Guru99 Insurance "Log In" page
+    Then I see the "Guru99 Insurance Log In" page

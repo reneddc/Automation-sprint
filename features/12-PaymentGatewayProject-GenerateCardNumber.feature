@@ -15,7 +15,7 @@ Scenario: Generate a card number
 
 Scenario: Check Credit Balance
   Given I am on the payment gateway project sections
-  And I press the "Check Credit Card Limit" button cc
+  And I press the "Check Credit Card Limit" button
   When I enter the required field of card
   | Enter Credit Card Number:      | 4825088890201232  |
   Then I should be able to see my information about the money spent and what I spent it on

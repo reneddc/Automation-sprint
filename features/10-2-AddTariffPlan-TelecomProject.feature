@@ -20,7 +20,7 @@ Scenario: Add tariff plan with valid values
         |Local Per Minutes Charges 	            | 2     |
         |Inter. Per Minutes Charges	            | 20    |
         |SMS Per Charges 	                    | 4     |
-    And Press the "submit" button of the form
+    And Press the "submit" button of the screen
 	Then I should see the message "Congratulation you add Tariff Plan"
 
 
@@ -28,7 +28,7 @@ Scenario: Add tariff plan with empty fields
 	Given I am on the Telecom Project section
     And I press the "Add Tariff Plan" link
     And I see the "Add Tariff Plan" title
-    When Press the "submit" button of the form
+    When Press the "submit" button of the screen
 	Then I should see the error alert "please fill all fields Correct Value"
 
 
@@ -74,7 +74,7 @@ Scenario: Reset the Add tariff plan form
         |Local Per Minutes Charges 	            | 2     |
         |Inter. Per Minutes Charges	            | 20    |
         |SMS Per Charges 	                    | 4     |
-	And Press the "Reset" button of the form
+	And Press the "Reset" button of the screen
 	Then I should see all the fields empty like:
         |Monthly Rental 	                    |    |
         |Free Local Minutes	                    |    |

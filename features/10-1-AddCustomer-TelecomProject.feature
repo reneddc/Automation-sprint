@@ -13,7 +13,7 @@ Scenario: Add custumer with empty form
     And I press the "Add Customer" link
     And I see the "Background check" form
     And I see the "Billing Address" form
-    When Press the "Submit" button of the form
+    When Press the "Submit" button of the screen
 	Then I should see the error alert "please fill all fields"
 
 
@@ -23,7 +23,7 @@ Scenario: Add custumer only with Background Check selected
     And I see the "Background check" form
     And I see the "Billing Address" form
     When Select the Done option of radio button
-    And Press the "Submit" button of the form
+    And Press the "Submit" button of the screen
 	Then I should see the error alert "please fill all fields"
 
 @saveCustomerID
@@ -38,7 +38,7 @@ Scenario: Add custumer filling only the billing form, not the Background check
         |Email: 	            | hugo@sanchez.com   |
         |Enter your Addrress:   | Sacaba   |	
         |Mobile Number: 	    | 65344375           |
-    And Press the "Submit" button of the form
+    And Press the "Submit" button of the screen
 	Then I should see a table with the following information:
         | Customer ID	    |  282412            |
 
@@ -76,7 +76,7 @@ Scenario: Add custumer without email
         |Email: 	            |    |
         |Enter your Addrress:   | Sacaba   |	
         |Mobile Number: 	    | 65344375           |
-	And Press the "Submit" button of the form
+	And Press the "Submit" button of the screen
 	Then I should see the error alert "please fill all fields"
 
 
@@ -92,7 +92,7 @@ Scenario: Add custumer with an invalid number
         |Email: 	            | hugo@sanchez.com   |
         |Enter your Addrress:   | Sacaba   |	
         |Mobile Number: 	    | aaa           |
-	And Press the "Submit" button of the form
+	And Press the "Submit" button of the screen
 	Then I should see the error alert "please fill all fields"
 
 
@@ -109,7 +109,7 @@ Scenario: Reset the Add customer form
         |Email: 	            | hugo@sanchez.com   |
         |Enter your Addrress:   | Sacaba   |	
         |Mobile Number: 	    | 65344375           |
-	And Press the "Reset" button of the form
+	And Press the "Reset" button of the screen
 	Then I should see all the fields empty like:
         |FirstName 	        |               |
         |LastName	        |               |
@@ -131,6 +131,6 @@ Scenario: Add custumer with valid values
         |Email: 	            | hugo@sanchez.com   |
         |Enter your Addrress:   | Sacaba   |	
         |Mobile Number: 	    | 65344375           |
-    And Press the "Submit" button of the form
+    And Press the "Submit" button of the screen
 	Then I should see a table with the following information:
         | Customer ID	    |  282412            |

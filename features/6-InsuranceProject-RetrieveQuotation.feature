@@ -6,7 +6,7 @@ Feature: See the Retrieve Quotation of a logged user of Guru99 Insurance
 Background: 
     Given I am on the sample homepage
     And I click the "Insurance Project" link of the navbar
-    And I see the Guru99 Insurance "Log In" page
+    And I see the "Guru99 Insurance Log In" page
 	And I enter a registered email and password 
 	And Press the "Log in" button of the screen
     And I click the "Retrieve Quotation" link
