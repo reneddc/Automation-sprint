@@ -6,6 +6,7 @@ Before do
   @RegisterLoginInsuranceProject = RegisterLoginInsuranceProject.new(page)
   @RequestRetriveInsuranceProject = RequestRetriveInsuranceProject.new(page)
   @AgileProject = AgileProject.new(page)
+  @PaymentGateway = PaymentGateway.new(page)
 end
 
 #After para todos los scenarios
@@ -19,6 +20,26 @@ Before '@createAndSaveUser' do
   @homepage.enterEmailId("carlos@test.com")
   click_button("Submit")
 end
+
+#Before para crear y obtener las credenciales de un user desde la homepage
+Before '@generateCardNumber' do 
+  @homepage.visitHomepage
+  click_link('Payment Gateway Project')
+end
+
+#Before para crear un credit card
+Before '@createNumberCard' do 
+  @PaymentGateway.visitCardNumberPage
+  credentials = @PaymentGateway.getCredentials()
+end
+
+#Before para guardar order Id
+After '@saveOrderId' do 
+  orderId = @PaymentGateway.getOrderId
+  ENV['ORDERID'] = orderId
+  orderId = @PaymentGateway.clickButtonHomeOrderId
+end
+
 
 After '@saveCustomerID' do 
   customerID = find(:xpath, '/html/body/section/div/div/table/tbody/tr[1]/td[2]/h3')

@@ -30,6 +30,10 @@ class InsuranceProject
                 expected_url = "https://demo.guru99.com/Security/SEC_V1/index.php"
             when "Guru99 Security Bank project Home"
                 expected_url = "https://demo.guru99.com/Security/SEC_V1/customer/Customerhomepage.php"
+            when "Payment Gateway Buy Toy"
+                expected_url = "https://demo.guru99.com/payment-gateway/index.php"
+            when "Generate Card Number"
+                expected_url = "https://demo.guru99.com/payment-gateway/cardnumber.php"
         end
         expected_url
     end

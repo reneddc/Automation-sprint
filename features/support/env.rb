@@ -13,6 +13,15 @@ ENV['ID_NUMBER'] = "33808"
 ENV['USERID'] = "mngr539425"
 ENV['USERPASSWORD'] = "ytypErU"
 
+#orderid
+ENV['ORDERID'] = "000000"
+
+#CARD NUMBRE CREDENTIALS
+ENV['CARDNUMBER'] = "000000000000000"
+ENV['CCV'] = "000"
+ENV['MONTH'] = "00"
+ENV['YEAR'] = "0000"
+
 #PTravel Settings
 ENV['USER']="Pepazo"
 ENV['PSW']="ILoveQA"
